@@ -4,7 +4,7 @@
 
 ライブラリとユニットテストとテストアプリケーションのプログラムを作成しました。
 ただし、中身が実装されていません。
-素敵なライブラリを作って下し。
+素敵なライブラリを作って下さい。
 ユニットテストとサンプルのアプリケーションも一緒に作成してください。
 
 [![MS Build and Test](https://github.com/tpu-game-2021/comp2_15_YourOwnLibrary/actions/workflows/ms_test.yml/badge.svg)](https://github.com/tpu-game-2021/comp2_15_YourOwnLibrary/actions/workflows/ms_test.yml)
