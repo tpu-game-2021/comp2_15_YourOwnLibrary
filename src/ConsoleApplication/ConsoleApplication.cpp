@@ -2,10 +2,31 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "../include/lib_func.h"
 
 int main()
 {
+	srand((unsigned int)time(NULL));
+	const int NUM = 100;
+	item items[NUM];
+
+	for (int i = 0; i < NUM; i++) {
+		items[i].key = rand();
+	}
+	printf_s("ソート前\n");
+	for (int i = 0; i < NUM; i++) {
+		printf_s("%d\n", items[i].key);
+	}
+
+	if (bin_sort(items, items + NUM) == true) {
+		printf_s("\nソート後\n");
+		for (int i = 0; i < NUM; i++) {
+			printf_s("%d\n", items[i].key);
+		}
+	}
+	else printf_s("\nソートに失敗しました。\n同じ数字が用いられた可能性があります。");
 
 	return 0;
 }
