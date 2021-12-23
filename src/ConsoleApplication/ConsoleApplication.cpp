@@ -6,10 +6,6 @@
 
 int main()
 {
-	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
-
 
 	return 0;
 }

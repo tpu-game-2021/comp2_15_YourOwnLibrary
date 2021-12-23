@@ -7,11 +7,17 @@
 extern "C" {
 #endif
 
-	// 素敵なオレオレライブラリーを作ってみよう！
+	typedef struct item_
+	{
+		unsigned int key;
+		char value[256];
+	}item;
 
-	int my_func_int();
+	//最大値のキー発見
+	int find_Max(item* begin, const item* end);
 
-	bool my_func_bool();
+	//バケットソート
+	bool bin_sort(item* begin, const item* end);
 
 
 	// C++ でCのライブラリを使うときのおまじない
