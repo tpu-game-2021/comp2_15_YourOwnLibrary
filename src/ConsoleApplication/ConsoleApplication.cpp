@@ -7,9 +7,15 @@
 int main()
 {
 	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
+	int Numbers[12] = { 3,5,8,12,17,23,30,38,47,57,68,80 };
 
+	printf("%d", Numbers[0]);
+	for (int i = 1; i < sizeof(Numbers) / sizeof(int); i++)
+	{
+		printf(", ");
+		printf("%d", Numbers[i]);
+	}
+	printf(" の\n最小公倍数は%d\n", my_func_int(Numbers, Numbers + sizeof(Numbers) / sizeof(int)));
 
 	return 0;
 }

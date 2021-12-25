@@ -5,14 +5,32 @@
 #include "../include/lib_func.h"
 
 
-
-int my_func_int()
+int my_func_int(int* begin, const int* end)
 {
-	return -1;
-}
+    if (begin == NULL || end == NULL) return -1;
+    if (begin > end) return -1;
 
-bool my_func_bool()
-{
-	return false;
+    long long int a, b, c, d;
+    a = begin[0];
+
+    for (int i = 1; i < end - begin; i++) {
+        b = begin[i];
+        if (a < 0) a *= -1;
+        if (b < 0) b *= -1;
+        if (a < b) {
+            int tmp = a;
+            a = b;
+            b = tmp;
+        }
+        d = a * b;
+        c = a % b;
+        while (c != 0) {
+            a = b;
+            b = c;
+            c = a % b;
+        }
+        a = d / b;
+    }
+	return a;
 }
 

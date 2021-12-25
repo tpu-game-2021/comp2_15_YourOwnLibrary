@@ -9,10 +9,8 @@ extern "C" {
 
 	// 素敵なオレオレライブラリーを作ってみよう！
 
-	int my_func_int();
-
-	bool my_func_bool();
-
+	int* Numbers;
+	int my_func_int(int* begin, const int* end);
 
 	// C++ でCのライブラリを使うときのおまじない
 #ifdef __cplusplus
