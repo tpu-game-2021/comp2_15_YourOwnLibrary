@@ -11,11 +11,19 @@ int main()
 	int input;
 	char* result[256];
 	initialize(&t);
-	add(&t, 1, "taro");
-	add(&t, 2, "jiro");
-	add(&t, 3, "saburo");
-	add(&t, 4, "siro");
-	add(&t, 5, "goro");
+	item items[5] = {
+	{ 4, "siro"},
+	{ 5, "goro"},
+	{ 1, "taro"},
+	{ 2, "jiro"},
+	{ 3, "saburo"},
+	};
+	
+	t = tree_sort(items, items + sizeof(items) / sizeof(item));
+	for (int i = 0; i < 5; i++)
+	{
+		printf("%2d : 「%s」\n", items[i].id, items[i].name);
+	}
 	printf("idを入力してください。");
 	scanf_s("%d", &input);
 	*result = find(&t, input);
