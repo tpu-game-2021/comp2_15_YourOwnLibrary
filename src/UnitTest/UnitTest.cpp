@@ -27,7 +27,7 @@ namespace UnitTest
 
 		TEST_METHOD(入力された値が0未満なら－1を返す)
 		{
-			Assert::AreEqual(-1, Change_Factorial(-2));
+			Assert::AreEqual(-1, Change_Factorial(-1));
 		}
 	};
 
