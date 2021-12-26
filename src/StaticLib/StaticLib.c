@@ -23,7 +23,7 @@ bool my_func_bool(val1,val2)
 	{
 		if (val1 == val2)
 		{
-			return 0;
+			return true;
 			flag = 1;
 		}
 		else
