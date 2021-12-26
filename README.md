@@ -7,7 +7,7 @@
 素敵なライブラリを作って下さい。
 ユニットテストとサンプルのアプリケーションも一緒に作成してください。
 
-[![MS Build and Test](https://github.com/2127057/comp2_15_YourOwnLibrary/actions/workflows/ms_test.yml/badge.svg)](https://github.com/ 2127057/comp2_15_YourOwnLibrary/actions/workflows/ms_test.yml)
+[![MS Build and Test](https://github.com/2127057/comp2_15_YourOwnLibrary/actions/workflows/ms_test.yml/badge.svg)](https://github.com/2127057/comp2_15_YourOwnLibrary/actions/workflows/ms_test.yml)
 
 （このファイルの上の行の[tpu-game-2021]の部分(2か所)を自分のアカウント名に修正してください）
 
