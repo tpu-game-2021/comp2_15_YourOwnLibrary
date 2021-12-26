@@ -7,11 +7,18 @@
 extern "C" {
 #endif
 
-	// 素敵なオレオレライブラリーを作ってみよう！
+	//片方向リストの構造体
+	typedef struct NODE { struct NODE* Next; int data; int key; }NODE;
+	typedef struct LIST { struct NODE* header; }LIST;
+	
 
-	int my_func_int();
-
-	bool my_func_bool();
+	void initialize_node(NODE* point, int value); //ノードを初期化
+	void initialize_list(LIST* list); //リストを初期化
+	void push_front(LIST* list, NODE* point); //先頭にデータを追加
+	void push_next(LIST* list, NODE* node);//ノードを先頭に追加する
+	void remove_front(LIST* list);//先頭のノードを削除
+	void remove_next(LIST* list, NODE* point); //pointの次のノードを削除
+	NODE* get_next(NODE* point);  //pointの次のノードを取得（無ければNULL）
 
 
 	// C++ でCのライブラリを使うときのおまじない

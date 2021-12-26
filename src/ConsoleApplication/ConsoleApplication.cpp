@@ -2,16 +2,32 @@
 //
 
 #include <stdio.h>
+#include<iostream>
 #include "../include/lib_func.h"
 
 int main()
 {
-	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
+	LIST list;
+	initialize_list(&list);
 
+	NODE node[1000];
+	for (int i = 0; i < 1000; i++)
+	{
+		initialize_node(node + i, i);
+		push_front(&list, node + i);
+	}
 
-	return 0;
+	printf("count dwon\n");
+
+	NODE* point = list.header;
+	while (point)
+	{
+		printf("%d\n", point->data);
+		point = get_next(point);
+	}
+
+	std::cout << "PRESS KEY \n";
+	getchar();
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
