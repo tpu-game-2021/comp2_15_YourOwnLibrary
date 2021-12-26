@@ -1,7 +1,5 @@
 ﻿#define WIN32_LEAN_AND_MEAN             // Windows ヘッダーからほとんど使用されていない部分を除外する
 #include "Windows.h"                    // Windows API の機能定義
-#include <stdlib.h>
-
 #include "../include/lib_func.h"
 
 int Change_Factorial(int wnum)
@@ -16,6 +14,11 @@ int Change_Factorial(int wnum)
 	return fnum;
 }
 
+bool Judge_Even_Odd(int wnum)
+{
+	if (wnum % 2 == 0) return true;
+	else return false;
+}
 
 
 

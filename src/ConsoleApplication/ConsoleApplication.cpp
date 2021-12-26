@@ -2,19 +2,17 @@
 //
 
 #include <stdio.h>
-#include <stdlib.h>
 #include "../include/lib_func.h"
 
 int main()
 {
-	int knum = 12;
+	int knum = 4;
 
 	Change_Factorial(knum);
+    Judge_Even_Odd(knum);
 
-	printf("%dの階乗は%d", knum, Change_Factorial(knum));
-
-
-
+	printf("%dの階乗は%d\n", knum, Change_Factorial(knum));
+	printf("%dは%s",knum, Judge_Even_Odd(knum) ?"偶数":"奇数");
 	return 0;
 }
 
