@@ -7,8 +7,8 @@
 int main()
 {
 	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
+	printf("1秒間に処理Aを行える回数 %d回\n\n\n", my_func_int());
+	printf("1フレーム中に処理Bが終わるか %s\n", my_func_bool(60) ? "true" : "false");
 
 
 	return 0;
