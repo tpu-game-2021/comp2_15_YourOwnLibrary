@@ -12,12 +12,11 @@ namespace UnitTest
 		
 		TEST_METHOD(TestMethod1)
 		{
-			Assert::AreEqual(0, my_func_int(), L"0が返ってくることを想定したテスト");
-		}
+			float start = 0,goal = 100,tweenSpd = 0.1f,temp = 0;
 
-		TEST_METHOD(TestMethod2)
-		{
-			Assert::IsTrue(my_func_bool(), L"true が返ってくることを想定したテスト");
+			Assert::IsFalse(ValueTween(start, goal, &tweenSpd, &temp, 1), L"false が返ってくることを想定したテスト");
+
+			Assert::IsTrue(ValueTween(start, goal, &tweenSpd, &temp, 0), L"true が返ってくることを想定したテスト");
 		}
 	};
 }

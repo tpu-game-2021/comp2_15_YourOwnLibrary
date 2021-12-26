@@ -1,15 +1,31 @@
 ﻿// ConsoleApplication.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
 //
 
+//定義し、実装した関数を実際に使用する場所
+
 #include <stdio.h>
 #include "../include/lib_func.h"
 
 int main()
 {
 	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
 
+	float startValue = 0;
+	float goalValue = 100;
+	float spd = 0.1f;
+	float temp = 0;
+
+	//Tweenする
+	//ValueTween(startValue, goalValue, spd, Linear);
+
+	while(temp <= goalValue)
+	{
+		ValueTween(startValue, goalValue, &spd, &temp, Linear);
+
+		printf("%.1f\n", temp);
+
+		//printf("%d\n", ValueTween(startValue, goalValue, spd, Linear));
+	}
 
 	return 0;
 }
