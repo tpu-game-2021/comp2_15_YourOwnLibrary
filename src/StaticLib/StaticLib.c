@@ -21,14 +21,10 @@ bool my_func_bool(val1,val2)
 	int flag = 0;
 	while ( flag=0) 
 	{
-		if (val1 == val2)
-		{
-			return true;
-			flag = 1;
-		}
-		else
+		if (val1 != val2)
 		{
 			val2 == val1;
+			flag = 1;
 		}
 	}
 }
