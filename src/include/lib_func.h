@@ -13,9 +13,6 @@ extern "C" {
 
 	int judge_prime(int num);
 
-	int prime_list(int num);
-
-
 	// C++ でCのライブラリを使うときのおまじない
 #ifdef __cplusplus
 } // extern "C"
