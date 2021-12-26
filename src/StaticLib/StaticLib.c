@@ -6,13 +6,30 @@
 
 
 
-int my_func_int()
+int my_func_int(val1,val2)
 {
-	return -1;
+	if (val1 != val2)
+	{
+		val2 == val1;
+		return val2;
+	}
+	else return val2;
 }
 
-bool my_func_bool()
+bool my_func_bool(val1,val2)
 {
-	return false;
+	int flag = 0;
+	while ( flag=0) 
+	{
+		if (val1 == val2)
+		{
+			return 0;
+			flag = 1;
+		}
+		else
+		{
+			val2 == val1;
+		}
+	}
 }
 

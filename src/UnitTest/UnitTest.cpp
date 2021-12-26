@@ -12,12 +12,30 @@ namespace UnitTest
 		
 		TEST_METHOD(TestMethod1)
 		{
-			Assert::AreEqual(0, my_func_int(), L"0が返ってくることを想定したテスト");
+			int val1 = 0;
+			int val2 = 0;
+			Assert::AreEqual(val1, my_func_int());
 		}
 
 		TEST_METHOD(TestMethod2)
 		{
-			Assert::IsTrue(my_func_bool(), L"true が返ってくることを想定したテスト");
+			int val1 = 0;
+			int val2 = 1;
+			Assert::AreEqual(val1, my_func_int());
+		}
+
+		TEST_METHOD(TestMethod3)
+		{
+			bool val1 = 0;
+			bool val2 = 0;
+			Assert::IsTrue(my_func_bool());
+		}
+
+		TEST_METHOD(TestMethod4)
+		{
+			bool val1 = 0;
+			bool val2 = 1;
+			Assert::IsTrue(my_func_bool());
 		}
 	};
 }
