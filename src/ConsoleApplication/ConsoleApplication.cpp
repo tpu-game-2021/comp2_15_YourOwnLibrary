@@ -2,13 +2,19 @@
 //
 
 #include <stdio.h>
+#include<stdlib.h>
+#include<time.h>
 #include "../include/lib_func.h"
 
 int main()
 {
 	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
+	int pass[4] = { 182,125,19,54 };
+	int comp[4];
+
+	my_func_int(comp, 4, pass, 4);
+	printf("%d\n%d\n%d\n%d\n", comp[0],comp[1],comp[2],comp[3]);
+	//printf("%s\n", my_func_bool() ? "true" : "false");
 
 
 	return 0;
