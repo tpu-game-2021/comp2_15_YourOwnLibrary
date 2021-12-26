@@ -5,25 +5,25 @@
 
 #include "../include/lib_func.h"
 
-int random(int x, int y)
-{
-	int a = 1;
-	int b = 2;
-	int c = NULL;
-	int d = 0;
-	int e = 0;
-
-	d = rand() % 3;
-	e = rand() % 3;
-
-	if (d == 0) x = a;
-	if (d == 0) x = b;
-	if (d == 0) x = c;
-	if (e == 0) y = a;
-	if (e == 0) y = a;
-	if (d == 0) y = a;
-    
-}
+//int random(int x, int y)
+//{
+//	int a = 1;
+//	int b = 2;
+//	int c = NULL;
+//	int d = 0;
+//	int e = 0;
+//
+//	d = rand() % 3;
+//	e = rand() % 3;
+//
+//	if (d == 0) x = a;
+//	if (d == 0) x = b;
+//	if (d == 0) x = c;
+//	if (e == 0) y = a;
+//	if (e == 0) y = a;
+//	if (d == 0) y = a;
+//    
+//}
 
 int my_func_int(int a, int b)
 {
