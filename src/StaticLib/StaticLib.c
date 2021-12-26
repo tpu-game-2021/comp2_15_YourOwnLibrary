@@ -4,15 +4,19 @@
 
 #include "../include/lib_func.h"
 
-
-
-int my_func_int()
+int Change_Factorial(int wnum)
 {
-	return -1;
+	if (wnum < 0 ||wnum >= 13) return -1;
+
+	int fnum = 1;
+	for (int i = 1; i <= wnum; i++) {
+		 fnum = fnum * i;
+	};
+
+	return fnum;
 }
 
-bool my_func_bool()
-{
-	return false;
-}
+
+
+
 

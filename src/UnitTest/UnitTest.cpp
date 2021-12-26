@@ -6,18 +6,25 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace UnitTest
 {
-	TEST_CLASS(UnitTest)
+	TEST_CLASS(UnitTestChange_Factorial)
 	{
 	public:
 		
 		TEST_METHOD(TestMethod1)
 		{
-			Assert::AreEqual(0, my_func_int(), L"0が返ってくることを想定したテスト");
+			int wnum = 5;
+			Assert::AreEqual(120, Change_Factorial(wnum));
 		}
 
 		TEST_METHOD(TestMethod2)
 		{
-			Assert::IsTrue(my_func_bool(), L"true が返ってくることを想定したテスト");
+			int wnum = 12;
+			Assert::AreEqual(479001600, Change_Factorial(wnum));
+		}
+		TEST_METHOD(TestMethod3)
+		{
+			int wnum = 13;
+				Assert::AreEqual(-1, Change_Factorial(wnum));
 		}
 	};
 }
