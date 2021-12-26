@@ -4,15 +4,21 @@
 
 #include "../include/lib_func.h"
 
-
+//足し算
 
 int my_func_int()
 {
+
+
+	a = begin[0].key + begin[1].key;
+
 	return -1;
 }
 
-bool my_func_bool()
+
+bool my_func_bool(item* begin, const item* end);
 {
-	return false;
+	if (letter.key == 0)return false;
+
 }
 
