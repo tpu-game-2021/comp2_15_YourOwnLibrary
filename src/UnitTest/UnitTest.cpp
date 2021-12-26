@@ -19,10 +19,12 @@ namespace UnitTest
 		{	
 			Assert::AreEqual(479001600, Change_Factorial(12));
 		}
+
 		TEST_METHOD(入力された値が13以上なら－1を返す)
 		{
 			Assert::AreEqual(-1, Change_Factorial(13));
 		}
+
 		TEST_METHOD(入力された値が0未満なら－1を返す)
 		{
 			Assert::AreEqual(-1, Change_Factorial(-2));
@@ -42,10 +44,6 @@ namespace UnitTest
 		{
 			Assert::AreEqual(false, Judge_Even_Odd(1));
 		}
-
-
-
-
 	};
 
 }
