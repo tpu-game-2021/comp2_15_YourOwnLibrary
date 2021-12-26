@@ -5,14 +5,58 @@
 #include "../include/lib_func.h"
 
 
-
-int my_func_int()
+int judge_prime(int num)
 {
-	return -1;
+	int i;  // ループの添え字
+	int flag = 0;  // 素数判定用
+
+	if (num < 1) return false;
+
+	if (num == 2)
+	{
+		return flag;
+	}
+
+	for (i = 2; i < num; i++)
+	{
+		if (num % i == 0)
+		{
+			flag = 1;
+			return flag;
+		}
+	}
+
+	if (flag == 0)  return flag;
 }
 
-bool my_func_bool()
+int judge_prime_many(int num)
 {
-	return false;
+	int i, j;       // ループの添え字
+	int flag = 0;   // 素数判定用
+	int count = 0;  // 素数の個数のカウント
+
+	if (num < 1)  return false;
+
+	for (i = 2; i < num; i++)
+	{
+		flag = 0;  // 判定の初期化用
+
+		for (j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				flag = 1;
+			}
+		}
+
+		if (flag == 0)
+		{
+			count++;
+		}
+	}
+
+	return count;
 }
+
+
 

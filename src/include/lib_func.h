@@ -8,10 +8,12 @@ extern "C" {
 #endif
 
 	// 素敵なオレオレライブラリーを作ってみよう！
+	
+	int judge_prime_many(int num);
 
-	int my_func_int();
+	int judge_prime(int num);
 
-	bool my_func_bool();
+	int prime_list(int num);
 
 
 	// C++ でCのライブラリを使うときのおまじない

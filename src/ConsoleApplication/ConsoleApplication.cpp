@@ -4,12 +4,13 @@
 #include <stdio.h>
 #include "../include/lib_func.h"
 
+
 int main()
 {
 	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
+	printf("%d\n\n", judge_prime(20020505));  // 私の生年月日をつなげた数字は素数か？
 
+	printf("%d\n", judge_prime_many(20020505));  // 私の生年月日をつなげた数字までに素数が何個あるか？
 
 	return 0;
 }
