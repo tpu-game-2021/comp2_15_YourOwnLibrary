@@ -11,7 +11,6 @@ extern "C" {
 
 	int my_func_int();
 
-	bool my_func_bool();
 
 
 	// C++ でCのライブラリを使うときのおまじない

@@ -4,15 +4,21 @@
 
 #include "../include/lib_func.h"
 
-
-
-int my_func_int()
+int my_func_int(int no)
 {
-	return -1;
-}
+    int i;
 
-bool my_func_bool()
-{
-	return false;
-}
+    if (no < 1)
+    {
+        return 0;
+    }
 
+    for (i = 2; i < no; i++) 
+    {
+        if (no % i == 0) 
+        {
+            return 0;
+        }
+    }
+    return 1;
+}

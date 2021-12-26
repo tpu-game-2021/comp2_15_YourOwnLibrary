@@ -15,9 +15,14 @@ namespace UnitTest
 			Assert::AreEqual(0, my_func_int(), L"0が返ってくることを想定したテスト");
 		}
 
-		TEST_METHOD(TestMethod2)
+		TEST_METHOD(素数なら0が返る)
 		{
-			Assert::IsTrue(my_func_bool(), L"true が返ってくることを想定したテスト");
+			Assert::AreEqual(0, my_func_int(2));
+		}
+
+		TEST_METHOD(素数でなければ1が返る)
+		{
+			Assert::AreEqual(1, my_func_int(4));
 		}
 	};
 }
