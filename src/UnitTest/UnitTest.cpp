@@ -62,23 +62,23 @@ namespace UnitTest
 			LIST list;
 			initialize_list(&list);
 
-			NODE node0,node1,node2;
-			initialize_node(&node0, 100);
-			initialize_node(&node1, 300);
-			initialize_node(&node2, 500);
+			NODE node[3];
+			initialize_node(&node[0], 100);
+			initialize_node(&node[1], 300);
+			initialize_node(&node[2], 500);
 
-			push_front(&list, &node0);
-			push_next(&list, &node1);
-			push_front(&list, &node2);
+			push_front(&list, &node[0]);
+			push_next(&list, &node[1]);
+			push_front(&list, &node[2]);
 
 			NODE* point = list.header;
-			Assert::AreEqual((void*)&node2, (void*)point);
+			Assert::AreEqual((void*)&node[2], (void*)point);
 			Assert::AreEqual(500, point->data);
 			point = get_next(point);
-			Assert::AreEqual((void*)&node1, (void*)point);
+			Assert::AreEqual((void*)&node[1], (void*)point);
 			Assert::AreEqual(300, point->data);
 			point = get_next(point);
-			Assert::AreEqual((void*)&node0, (void*)point);
+			Assert::AreEqual((void*)&node[0], (void*)point);
 			Assert::AreEqual(100, point->data);
 
 			Assert::IsNull(get_next(point));

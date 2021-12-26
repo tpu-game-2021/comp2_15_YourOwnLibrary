@@ -4,7 +4,6 @@
 
 #include "../include/lib_func.h"
 
-//value = 値
 //ノードの初期化
 void initialize_node(NODE* point, int key)
 {
