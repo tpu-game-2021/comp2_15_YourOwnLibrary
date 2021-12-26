@@ -9,7 +9,28 @@ int main()
 	// ここでオレオレライブラリを使った素敵なサンプルを作る
 	printf("%d\n", my_func_int());
 	printf("%s\n", my_func_bool() ? "true" : "false");
+	
+	int val1, val2, val3, sum;
 
+	val1 = 9;
+	val2 = 99;
+	printf("%dは%dの%s\n", val2, val1, is_same(val1, val2) ? "倍数である" : "倍数ではない");
+
+	val1 = 4;
+	val2 = 24;
+	printf("%dは%dの%s\n", val2, val1, is_same(val1, val2) ? "倍数である" : "倍数ではない");
+
+	sum = 6;
+	val1 = 6;
+	val2 = 6;
+	val3 = 6;
+	printf("%dと%dと%dの任意の数の和が%dの倍数になる組み合わせは%d通りです\n", val1, val2, val3, sum, calc_BAY_3(sum, val1, val2, val3));
+
+	sum = 6;
+	val1 = 4;
+	val2 = 8;
+	val3 = 8;
+	printf("%dと%dと%dの任意の数の和が%dの倍数になる組み合わせは%d通りです\n", val1, val2, val3, sum, calc_BAY_3(sum, val1, val2, val3));
 
 	return 0;
 }
