@@ -7,10 +7,23 @@
 int main()
 {
 	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
-
-
+	tree t;
+	int input;
+	char* result[256];
+	initialize(&t);
+	add(&t, 1, "taro");
+	add(&t, 2, "jiro");
+	add(&t, 3, "saburo");
+	add(&t, 4, "siro");
+	add(&t, 5, "goro");
+	printf("idを入力してください。");
+	scanf_s("%d", &input);
+	*result = find(&t, input);
+	if (*result != NULL)
+		printf("id「%d」は%sです。", input, *result);
+	else
+		printf("失敗しました。そのidの人はいません。");
+	finalize(&t);
 	return 0;
 }
 
@@ -18,7 +31,7 @@ int main()
 // プログラムのデバッグ: F5 または [デバッグ] > [デバッグの開始] メニュー
 
 // 作業を開始するためのヒント: 
-//    1. ソリューション エクスプローラー ウィンドウを使用してファイルを追加/管理します 
+//   1. ソリューション エクスプローラー ウィンドウを使用してファイルを追加/管理します 
 //   2. チーム エクスプローラー ウィンドウを使用してソース管理に接続します
 //   3. 出力ウィンドウを使用して、ビルド出力とその他のメッセージを表示します
 //   4. エラー一覧ウィンドウを使用してエラーを表示します

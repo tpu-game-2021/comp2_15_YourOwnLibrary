@@ -9,10 +9,32 @@ extern "C" {
 
 	// 素敵なオレオレライブラリーを作ってみよう！
 
-	int my_func_int();
+	typedef struct node_
+	{
+		node_* left;
+		node_* right;
+		int id;
+		char name[256];
+	}node;
+	typedef struct item_
+	{
+		int id;
+		char name[256];
+	}item;
+	typedef struct
+	{
+		node* root;
+	}tree;
 
-	bool my_func_bool();
+	void initialize(tree* t);
 
+	void finalize(tree* t);
+
+	bool add(tree* t, int key, const char* value);
+
+	char* find(const tree* t, int key);
+
+	tree tree_sort(item* begin,item* end);
 
 	// C++ でCのライブラリを使うときのおまじない
 #ifdef __cplusplus
