@@ -9,7 +9,7 @@ extern "C" {
 
 	// 素敵なオレオレライブラリーを作ってみよう！
 
-	int my_func_int();
+	int my_func_int(int a,int b);
 
 	bool my_func_bool();
 
