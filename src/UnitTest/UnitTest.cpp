@@ -27,13 +27,6 @@ namespace UnitTest
 		TEST_METHOD(TestMethod3)
 		{
 			bool val1 = 0;
-			bool val2 = 0;
-			Assert::IsTrue(my_func_bool());
-		}
-
-		TEST_METHOD(TestMethod4)
-		{
-			bool val1 = 0;
 			bool val2 = 1;
 			Assert::IsTrue(my_func_bool());
 		}
