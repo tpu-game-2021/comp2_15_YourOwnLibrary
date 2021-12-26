@@ -6,7 +6,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace UnitTest
 {
-	TEST_CLASS(int型品質確認)
+	TEST_CLASS(UnitTestChangeFactorial)
 	{
 	public:
 		
@@ -29,7 +29,7 @@ namespace UnitTest
 		}
 	};
 
-	TEST_CLASS(bool型品質確認)
+	TEST_CLASS(UnitTestJudgeEvenOdd)
 	{
 	public:
 

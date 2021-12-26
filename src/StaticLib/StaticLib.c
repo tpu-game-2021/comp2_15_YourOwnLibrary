@@ -10,7 +10,6 @@ int Change_Factorial(int wnum)
 	for (int i = 1; i <= wnum; i++) {
 		 fnum = fnum * i;
 	};
-
 	return fnum;
 }
 
