@@ -6,18 +6,38 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace UnitTest
 {
-	TEST_CLASS(UnitTest)
+	TEST_CLASS(基本確認)
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(一文字母音一つ)
 		{
-			Assert::AreEqual(0, my_func_int(), L"0が返ってくることを想定したテスト");
+			char sentence[] = "a";
+			Assert::AreEqual(1, my_func_int(sentence), L"1が返ってくることを想定したテスト");
 		}
 
-		TEST_METHOD(TestMethod2)
+		TEST_METHOD(一文字子音一つ)
 		{
-			Assert::IsTrue(my_func_bool(), L"true が返ってくることを想定したテスト");
+			char sentence[] = "ka";
+			Assert::AreEqual(0, my_func_int(sentence), L"0が返ってくることを想定したテスト");
+		}
+
+		TEST_METHOD(二文字母音二つ)
+		{
+			char sentence[] = "ai";
+			Assert::AreEqual(2, my_func_int(sentence), L"2が返ってくることを想定したテスト");
+		}
+
+		TEST_METHOD(二文字母音一つ)
+		{
+			char sentence[] = "aka";
+			Assert::AreEqual(1, my_func_int(sentence), L"1が返ってくることを想定したテスト");
+		}
+
+		TEST_METHOD(二文字子音二つ)
+		{
+			char sentence[] = "kaki";
+			Assert::AreEqual(0, my_func_int(sentence), L"0が返ってくることを想定したテスト");
 		}
 	};
 }

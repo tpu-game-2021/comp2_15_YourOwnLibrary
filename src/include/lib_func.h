@@ -9,9 +9,7 @@ extern "C" {
 
 	// 素敵なオレオレライブラリーを作ってみよう！
 
-	int my_func_int();
-
-	bool my_func_bool();
+	int my_func_int(char sentence[]);
 
 
 	// C++ でCのライブラリを使うときのおまじない

@@ -7,9 +7,9 @@
 int main()
 {
 	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
+	char sentence[256] = "akairo";
 
+	printf("%d\n", my_func_int(sentence));
 
 	return 0;
 }

@@ -154,6 +154,7 @@
     <ClInclude Include="..\include\lib_func.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\include\lib_func.cpp" />
     <ClCompile Include="StaticLib.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
