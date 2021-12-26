@@ -8,12 +8,16 @@ extern "C" {
 #endif
 
 	// 素敵なオレオレライブラリーを作ってみよう！
+	typedef struct item_
+	{
+		unsigned int key;
+		char value[256];
+	}item;
 
-	int my_func_int();
+	bool counting_sort(item* begin, const item* end);
 
-	bool my_func_bool();
-
-
+	#define POINTS 10
+	
 	// C++ でCのライブラリを使うときのおまじない
 #ifdef __cplusplus
 } // extern "C"

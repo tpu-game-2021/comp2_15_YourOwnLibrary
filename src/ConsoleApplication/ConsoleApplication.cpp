@@ -1,17 +1,36 @@
 ﻿// ConsoleApplication.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
 //
 
+#include <stdlib.h>
 #include <stdio.h>
-#include "../include/lib_func.h"
+#include "../include/lib_func.h" 
 
 int main()
 {
 	// ここでオレオレライブラリを使った素敵なサンプルを作る
-	printf("%d\n", my_func_int());
-	printf("%s\n", my_func_bool() ? "true" : "false");
+	//100人のテストの結果をソートする
+	const int NUM = 1000;
+	item* items=(item*)malloc(sizeof(item) * NUM);
 
+	for (int i= 0; i < NUM; i++)
+	{
+		items[i].key = rand() % (POINTS + 1);
+	}
 
-	return 0;
+	printf("ソート前\n");
+	
+	for (int i = 0; i < NUM; i++){
+		printf("%3d\n", items[i].key);
+	}
+
+	counting_sort(items, items + NUM);
+
+	printf("\nソート後\n");
+	for (int i = 0; i < NUM; i++){
+		printf("%3d\n", items[i].key);
+	}
+
+	free(items);
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
